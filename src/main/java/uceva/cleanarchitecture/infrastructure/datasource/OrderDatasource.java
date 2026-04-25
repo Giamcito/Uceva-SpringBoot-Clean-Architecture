@@ -39,7 +39,7 @@ public class OrderDatasource {
                 id,
                 generateOrderNumber(id),
                 faker.name().fullName(),
-                faker.number().randomDouble(2, 10000, 500000),
+            (float) faker.number().randomDouble(2, 10000, 500000),
                 randomStatus(),
                 LocalDateTime.now().minusDays(random.nextInt(30)).format(formatter),
                 faker.number().numberBetween(1, 20)
